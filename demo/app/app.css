@@ -1,0 +1,18 @@
+﻿Label {
+  padding:10;
+  horizontal-align: center;
+}
+
+.fa {
+  font-family: FontAwesome, fontawesome-webfont;
+  font-size:60;
+}
+
+.ion {
+  font-family: Ionicons, ionicons;
+  font-size:60;
+}
+
+GridLayout {
+  padding-bottom: 50;
+}
