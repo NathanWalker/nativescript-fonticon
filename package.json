@@ -24,12 +24,22 @@
 		"NativeScript",
 		"JavaScript",
 		"Android",
-		"iOS"
+		"iOS",
+    "icon",
+    "font icon",
+    "font"
 	],
 	"author": {
 		"name": "Nathan Walker",
 		"email": "walkerrunpdx@gmail.com"
 	},
+  "contributors": [
+    {
+      "name": "Nathanael Anderson",
+      "email": "nathan@master-technology",
+      "url": "https://github.com/nathanaela"
+    }
+  ],
 	"bugs": {
 		"url": "https://github.com/NathanWalker/nativescript-fonticon/issues"
 	},
