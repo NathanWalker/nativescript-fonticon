@@ -49,13 +49,11 @@ app/fonts/fontawesome-webfont.ttf
 
 ```
 .fa {
-  font-family: FontAwesome;
+  font-family: FontAwesome, fontawesome-webfont;
 }
 ```
 
-**NOTE**: Android uses the name of the file for the font-family (In this case, `fontawesome-webfont`.ttf. iOS uses the actual name of the font; for example, as found [here](https://github.com/FortAwesome/Font-Awesome/blob/master/css/font-awesome.css#L8). You could rename the font filename to `FontAwesome.ttf` to use just: `font-family: FontAwesome`. 
-
-You can [learn more here](http://fluentreports.com/blog/?p=176).
+**NOTE**: Android uses the name of the file for the font-family (In this case, `fontawesome-webfont`.ttf. iOS uses the actual name of the font; for example, as found [here](https://github.com/FortAwesome/Font-Awesome/blob/master/css/font-awesome.css#L8). You could rename the font filename to `FontAwesome.ttf` to use just: `font-family: FontAwesome`. You can [learn more here](http://fluentreports.com/blog/?p=176).(http://fluentreports.com/blog/?p=176).
 
 * Copy css to `app` somewhere, for example:
 
@@ -63,9 +61,7 @@ You can [learn more here](http://fluentreports.com/blog/?p=176).
 app/font-awesome.css
 ```
 
-Then modify the css file to isolate just the icon fonts needed:
-
-[Watch this video to better understand]().
+Then modify the css file to isolate just the icon fonts needed. [Watch this video to better understand](https://www.youtube.com/watch?v=qb2sk0XXQDw).
 
 * Configure your fonts and setup the converter:
 
@@ -109,7 +105,7 @@ To avoid confusion with iOS native classes, `TNS` is used instead.
 
 ## How about NativeScript with Angular?
 
-Got ya' covered. Use this if using [Angular](https://angular.io/):
+If using [Angular](https://angular.io/), use this instead:
 
 * [nativescript-ng2-fonticon](https://github.com/NathanWalker/nativescript-ng2-fonticon)
 
