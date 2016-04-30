@@ -1,12 +1,13 @@
 {
 	"name": "nativescript-fonticon",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Use custom font icon collections seamlessly with NativeScript.",
-	"main": "fonticon.js",
+	"main": "nativescript-fonticon.js",
+	"typings": "./nativescript-fonticon.d.ts",
 	"nativescript": {
 		"platforms": {
-			"android": "1.7.1",
-      "ios": "1.7.0"
+			"android": "2.0.0",
+      "ios": "2.0.0"
 		}
 	},
 	"scripts": {
