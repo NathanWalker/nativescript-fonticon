@@ -2,12 +2,33 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
+        "declaration": true,
         "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "sourceMap": true
+        "lib": [
+            "dom"
+        ],
+        "sourceMap": true,
+        "pretty": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "noEmitHelpers": true,
+        "noEmitOnError": false,
+        "noImplicitAny": false,
+        "noImplicitReturns": true,
+        "noImplicitUseStrict": false,
+        "noFallthroughCasesInSwitch": true,
+        "typeRoots": [
+            "./node_modules/@types",
+            "./node_modules"
+        ],
+        "types": [
+        ]
     },
     "files": [
-      "demo/node_modules/tns-core-modules/tns-core-modules.d.ts",
+      "node_modules/tns-core-modules/tns-core-modules.d.ts",
       "nativescript-fonticon.ts"
     ],
     "compileOnSave": false
