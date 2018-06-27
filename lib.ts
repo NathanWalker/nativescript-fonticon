@@ -2,12 +2,12 @@ export const mapCss = (data: any, debug?: boolean): object => {
   const map = {}
   let sets = data.split('}');
   let cleanValue = (val) => {
-    let v = val.split('content:')[1].replace(/\\f/, '\\uf').trim().replace(/\"/g, '').slice(0, -1);
+    let v = val.replace(/content:\s*"\\f([^"]+)"/, '\\uf$1').trim();
     return v;
   };
 
   for (let set of sets) {
-    let pair = set.split(':before {');
+    let pair = set.split(/:before\s*{/);
     let keyGroups = pair[0];
     let keys = keyGroups.split(',');
     if (pair[1]) {

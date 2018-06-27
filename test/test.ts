@@ -10,7 +10,7 @@ try {
   throw err
 }
 
-const map = lib.mapCss(fileContent)
+const map = lib.mapCss(fileContent, true)
 
 const expected = {
   'fa-glass': '\uf000',
