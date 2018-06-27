@@ -1,5 +1,6 @@
 import * as app from 'application';
 import {knownFolders} from 'file-system';
+import * as lib from './lib'
 
 export class TNSFontIcon {
   public static css: any = {}; // font icon collections containing maps of classnames to unicode
@@ -19,29 +20,6 @@ export class TNSFontIcon {
       TNSFontIcon.css[currentName] = {};
     };
 
-    let mapCss = (data: any): void => {
-      let sets = data.split('}');
-      let cleanValue = (val) => {
-        let v = val.split('content:')[1].replace(/\\f/, '\\uf').trim().replace(/\"/g, '').slice(0, -1);
-        return v;
-      };
-
-      for (let set of sets) {
-        let pair = set.split(':before {');
-        let keyGroups = pair[0];
-        let keys = keyGroups.split(',');
-        if (pair[1]) {
-          let value = cleanValue(pair[1]);
-          for (let key of keys) {
-            key = key.trim().slice(1).split(':before')[0];
-            TNSFontIcon.css[currentName][key] = String.fromCharCode(parseInt(value.substring(2), 16));
-            if (TNSFontIcon.debug) {
-              console.log(`${key}: ${value}`);
-            }
-          }
-        }
-      }
-    };    
 
     let loadFile = (path: string): Promise<any> => {
       if (TNSFontIcon.debug) {
@@ -51,7 +29,8 @@ export class TNSFontIcon {
       let cssFile = knownFolders.currentApp().getFile(path);
       return new Promise((resolve, reject) => {
         cssFile.readText().then((data) => {
-          mapCss(data);
+          const map = lib.mapCss(data, TNSFontIcon.debug);
+          TNSFontIcon.css[currentName] = map
           resolve();
         }, (err) => {
           reject(err);
