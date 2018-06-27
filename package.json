@@ -16,7 +16,7 @@
 		"demo.android": "npm run preparedemo; cd demo; tns run android",
 		"preparedemo": "npm run build; cd demo; tns plugin remove nativescript-fonticon; tns plugin add ..; tns install",
 		"setup": "cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd ..",
-		"test": "ts-node --project ./test/tsconfig.json test/test.ts"
+		"test": "ts-node --project ./test/tsconfig.json test/mapcss.spec.ts"
 	},
 	"repository": {
 		"type": "git",
