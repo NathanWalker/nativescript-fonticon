@@ -7,15 +7,16 @@
 	"nativescript": {
 		"platforms": {
 			"android": "2.0.0",
-      "ios": "2.0.0"
+			"ios": "2.0.0"
 		}
 	},
 	"scripts": {
 		"build": "tsc",
-    "demo.ios": "npm run preparedemo; cd demo; tns emulate ios",
+		"demo.ios": "npm run preparedemo; cd demo; tns emulate ios",
 		"demo.android": "npm run preparedemo; cd demo; tns run android",
 		"preparedemo": "npm run build; cd demo; tns plugin remove nativescript-fonticon; tns plugin add ..; tns install",
-		"setup": "cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd .."
+		"setup": "cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd ..",
+		"test": "ts-node --project ./test/tsconfig.json test/test.ts"
 	},
 	"repository": {
 		"type": "git",
@@ -26,21 +27,21 @@
 		"JavaScript",
 		"Android",
 		"iOS",
-    "icon",
-    "font icon",
-    "font"
+		"icon",
+		"font icon",
+		"font"
 	],
 	"author": {
 		"name": "Nathan Walker",
 		"email": "walkerrunpdx@gmail.com"
 	},
-  "contributors": [
-    {
-      "name": "Nathanael Anderson",
-      "email": "nathan@master-technology",
-      "url": "https://github.com/nathanaela"
-    }
-  ],
+	"contributors": [
+		{
+			"name": "Nathanael Anderson",
+			"email": "nathan@master-technology",
+			"url": "https://github.com/nathanaela"
+		}
+	],
 	"bugs": {
 		"url": "https://github.com/NathanWalker/nativescript-fonticon/issues"
 	},
@@ -51,7 +52,9 @@
 	"homepage": "https://github.com/NathanWalker/nativescript-fonticon",
 	"readmeFilename": "README.md",
 	"devDependencies": {
-		"typescript": "^2.1.4",
-		"tns-core-modules": "^2.4.2"
+		"@types/node": "^10.3.6",
+		"tns-core-modules": "^2.4.2",
+		"ts-node": "^7.0.0",
+		"typescript": "^2.1.4"
 	}
 }
