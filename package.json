@@ -16,7 +16,8 @@
 		"demo.android": "npm run preparedemo; cd demo; tns run android",
 		"preparedemo": "npm run build; cd demo; tns plugin remove nativescript-fonticon; tns plugin add ..; tns install",
 		"setup": "cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd ..",
-		"test": "cross-env TS_NODE_PROJECT=test/tsconfig.json mocha --require ts-node/register --watch-extensions ts \"test/**/*spec.ts\""
+		"test": "cross-env TS_NODE_PROJECT=test/tsconfig.json mocha --require ts-node/register --watch-extensions ts \"test/**/*spec.ts\"",
+    "lint": "tslint --project ./ --format stylish"
 	},
 	"repository": {
 		"type": "git",
@@ -59,6 +60,7 @@
 		"mocha": "^5.2.0",
 		"tns-core-modules": "^2.4.2",
 		"ts-node": "^7.0.0",
+		"tslint": "5.10.0",
 		"typescript": "^2.1.4"
 	}
 }
