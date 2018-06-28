@@ -3,7 +3,7 @@ import * as assert from 'assert'
 import { describe, it, before } from 'mocha'
 import * as lib from '../lib'
 
-describe('Test mapCss function', () => {
+describe('Test mapCss function with icons-only css file', () => {
 
   let fileContent = ''
   let map
@@ -30,7 +30,10 @@ describe('Test mapCss function', () => {
 
   before('load css file to test', () => {
     try {
-      fileContent = fs.readFileSync('test/font-awesome.css', 'utf8')
+      fileContent = fs.readFileSync(
+        require.resolve('./font-awesome.css'),
+        'utf8'
+      )
     } catch (err) {
       throw err
     }
@@ -46,8 +49,8 @@ describe('Test mapCss function', () => {
 
   it('has expected keys and values', () => {
     const assertPropExistsWithValue = (map, key, value) => {
-      assert.ok(map.hasOwnProperty(key))
-      assert.ok(typeof map[key] === 'string')
+      assert.ok(map.hasOwnProperty(key), `Key "${key}" is missing`)
+      assert.ok(typeof map[key] === 'string', `Key "${key}" has unexpected type "${typeof map[key]}"`)
       assert.strictEqual(
         map[key],
         value,
