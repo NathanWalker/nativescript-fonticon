@@ -1,13 +1,13 @@
 export const mapCss = (data: any, debug?: boolean): object => {
-  const map = {}
-  let sets = data.split('}');
+  const map = {};
+  const sets = data.split('}');
 
-  for (let set of sets) {
-    let pair = set.split(/:before\s*{/);
-    let keyGroups = pair[0];
-    let keys = keyGroups.split(',');
+  for (const set of sets) {
+    const pair = set.split(/:before\s*{/);
+    const keyGroups = pair[0];
+    const keys = keyGroups.split(',');
     if (pair[1]) {
-      let value = cleanValue(pair[1]);
+      const value = cleanValue(pair[1]);
       if (!value) {
         continue;
       }
@@ -20,13 +20,13 @@ export const mapCss = (data: any, debug?: boolean): object => {
       }
     }
   }
-  return map
-}
+  return map;
+};
 
 export const cleanValue = (val: string): string | void => {
-  const matches = val.match(/content:\s*"\\f([^"]+)"/i)
+  const matches = val.match(/content:\s*"\\f([^"]+)"/i);
   if (matches) {
-    return `\\uf${matches[1]}`
+    return `\\uf${matches[1]}`;
   }
   return void 0;
-}
+};
