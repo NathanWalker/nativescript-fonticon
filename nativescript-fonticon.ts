@@ -1,4 +1,3 @@
-import * as app from 'application';
 import {knownFolders} from 'file-system';
 import * as lib from './lib';
 
