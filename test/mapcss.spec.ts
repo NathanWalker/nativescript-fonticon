@@ -41,7 +41,7 @@ describe('Test mapCss function', () => {
   })
 
   it('has expected number of keys', () => {
-    assert.equal(Object.keys(map).length, Object.keys(expected).length)
+    assert.strictEqual(Object.keys(map).length, Object.keys(expected).length)
   })
 
   it('has expected keys and values', () => {
