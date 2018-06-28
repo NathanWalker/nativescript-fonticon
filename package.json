@@ -16,7 +16,7 @@
 		"demo.android": "npm run preparedemo; cd demo; tns run android",
 		"preparedemo": "npm run build; cd demo; tns plugin remove nativescript-fonticon; tns plugin add ..; tns install",
 		"setup": "cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd ..",
-		"test": "ts-node --project ./test/tsconfig.json test/mapcss.spec.ts"
+		"test": "cross-env TS_NODE_PROJECT=test/tsconfig.json mocha --require ts-node/register --watch-extensions ts \"test/**/*spec.ts\""
 	},
 	"repository": {
 		"type": "git",
@@ -52,7 +52,10 @@
 	"homepage": "https://github.com/NathanWalker/nativescript-fonticon",
 	"readmeFilename": "README.md",
 	"devDependencies": {
+		"@types/mocha": "^5.2.3",
 		"@types/node": "^10.3.6",
+		"cross-env": "^5.2.0",
+		"mocha": "^5.2.0",
 		"tns-core-modules": "^2.4.2",
 		"ts-node": "^7.0.0",
 		"typescript": "^2.1.4"

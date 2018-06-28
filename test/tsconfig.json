@@ -4,6 +4,7 @@
         "module": "commonjs",
         "strict": true,
         "noImplicitAny": false,
+        "sourceMap": true,
         "types": [
             "../node_modules/@types/node"
         ]
