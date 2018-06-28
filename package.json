@@ -52,6 +52,7 @@
 	"homepage": "https://github.com/NathanWalker/nativescript-fonticon",
 	"readmeFilename": "README.md",
 	"devDependencies": {
+		"@fortawesome/fontawesome-free": "5.1.0",
 		"@types/mocha": "^5.2.3",
 		"@types/node": "^10.3.6",
 		"cross-env": "^5.2.0",
