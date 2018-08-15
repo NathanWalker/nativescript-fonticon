@@ -94,6 +94,27 @@ Demo FontAwesome (Android) |  Demo Ionicons (Android)
 -------- | -------
 ![Sample3](https://cdn.filestackcontent.com/lNCptx2aQisOa6p27iqb?v=0) | ![Sample4](https://cdn.filestackcontent.com/2ajSF92uQDusI37fEvQA?v=0)
 
+### Font Awesome 5
+
+In this case, you have to copy and import each `ttf` file and associate it with the proper class:
+
+```
+.fas {
+  font-family: Font Awesome 5 Free, fa-solid-800;
+}
+.far {
+  font-family: Font Awesome 5 Free, fa-regular-400;
+}
+```
+
+but still you will import the `css` only once with the `fa` prefix:
+
+```
+TNSFontIcon.paths = {
+  'fa': 'font-awesome.css'
+};
+```
+
 ## How about NativeScript with Angular?
 
 If using [Angular](https://angular.io/), use this instead:
