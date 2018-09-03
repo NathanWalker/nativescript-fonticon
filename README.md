@@ -7,7 +7,7 @@
 
 You can use icon fonts with NativeScript by combining a class with a unicode reference in the view:
 
-* css
+* CSS
 ```
 .fa {
   font-family: FontAwesome;
