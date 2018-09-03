@@ -6,7 +6,7 @@ export class TNSFontIcon {
   public static paths: any = {}; // file paths to font icon collections
   public static debug: boolean = false;
 
-  public static loadCss(): void {
+  public static loadCss(): Promise<any> {
     let cnt = 0;
     let currentName: string;
     let fontIconCollections = Object.keys(TNSFontIcon.paths);
@@ -59,17 +59,24 @@ export class TNSFontIcon {
       });
     };    
     
-    let loadFiles = () => {
-      initCollection();
-      if (cnt < fontIconCollections.length) {
-        loadFile(TNSFontIcon.paths[currentName]).then(() => {
-          cnt++;
-          loadFiles();
-        });
-      }
+    let loadFiles = (): Promise<any> => {
+      return new Promise((resolve) => {
+        initCollection();
+        
+        if (cnt < fontIconCollections.length) {
+          loadFile(TNSFontIcon.paths[currentName]).then(() => {
+            cnt++;
+            return loadFiles().then(() => {
+              resolve()
+            });
+          });
+        } else {
+          resolve();
+        }
+      });
     };
 
-    loadFiles();         
+    return loadFiles();         
   }
 }
 
