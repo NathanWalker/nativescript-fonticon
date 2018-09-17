@@ -1,0 +1,11 @@
+.ts-node/
+demo/
+*.png
+*.log
+*.ts
+!*.d.ts
+yarn.lock
+tslint.json
+tsconfig.json
+package-lock.json
+test

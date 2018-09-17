@@ -1,6 +1,0 @@
-.ts-node/
-demo/
-*.png
-*.log
-*.ts
-!*.d.ts

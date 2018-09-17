@@ -76,7 +76,7 @@ TNSFontIcon.paths = {
 };
 TNSFontIcon.loadCss();
 
-application.resources['fonticon'] = fonticon;
+application.setResources( { fonticon } );
 application.start({ moduleName: 'main-page' });
 ```
 
