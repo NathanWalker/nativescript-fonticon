@@ -1,0 +1,55 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run all tests",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/mocha",
+      "runtimeArgs": [
+        "--require",
+        "ts-node/register",
+        "--watch-extensions",
+        "ts",
+        "--no-timeouts",
+        "--colors",
+        "test/**/*spec.ts"
+      ],
+      "env": {
+        "TS_NODE_PROJECT": "test/tsconfig.json",
+        "TS_NODE_CACHE_DIRECTORY": "${workspaceRoot}/.ts-node",
+        "TS_NODE_CACHE": "false"
+      },
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "sourceMaps": true,
+      "internalConsoleOptions": "openOnSessionStart",
+      "outFiles": ["${workspaceRoot}/.ts-node/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run current test",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/mocha",
+      "runtimeArgs": [
+        "--require",
+        "ts-node/register",
+        "--watch-extensions",
+        "ts",
+        "--no-timeouts",
+        "--colors",
+        "${relativeFile}"
+      ],
+      "env": {
+        "TS_NODE_PROJECT": "test/tsconfig.json",
+        "TS_NODE_CACHE_DIRECTORY": "${workspaceRoot}/.ts-node",
+        "TS_NODE_CACHE": "false"
+      },
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "sourceMaps": true,
+      "internalConsoleOptions": "openOnSessionStart",
+      "outFiles": ["${workspaceRoot}/.ts-node/**"]
+    },
+  ]
+}

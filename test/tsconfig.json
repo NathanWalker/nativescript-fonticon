@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "strict": true,
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "types": [
+            "../node_modules/@types/node"
+        ]
+    },
+    "exclude": [
+        "../node_modules"
+    ]
+}
