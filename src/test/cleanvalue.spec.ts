@@ -39,4 +39,11 @@ describe('Test cleanValue function', () => {
     );
   });
 
+  it('with single quotes', () => {
+    assert.strictEqual(
+      lib.cleanValue("content: '\\f000'; "),
+      '\\uf000',
+    );
+  });
+
 });
