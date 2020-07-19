@@ -21,16 +21,9 @@
         "noImplicitAny": false,
         "noImplicitReturns": true,
         "noImplicitUseStrict": false,
-        "noFallthroughCasesInSwitch": true,
-        "typeRoots": [
-            "./node_modules/@types",
-            "./node_modules"
-        ],
-        "types": [
-        ]
+        "noFallthroughCasesInSwitch": true
     },
     "files": [
-      "node_modules/tns-core-modules/tns-core-modules.d.ts",
       "nativescript-fonticon.ts"
     ],
     "compileOnSave": false
