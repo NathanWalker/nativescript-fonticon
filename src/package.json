@@ -1,6 +1,6 @@
 {
 	"name": "nativescript-fonticon",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "Use custom font icon collections seamlessly with NativeScript.",
 	"main": "nativescript-fonticon",
 	"typings": "nativescript-fonticon.d.ts",
