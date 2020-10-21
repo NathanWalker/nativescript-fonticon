@@ -10,8 +10,8 @@
 	},
 	"dependencies": {
 		"nativescript-fonticon": "file:../src",
-		"tns-core-modules": "^4.2.0"
-	},
+    "@nativescript/core": "~7.0.0"
+  },
 	"devDependencies": {
 		"babel-traverse": "6.7.6",
 		"babel-types": "6.7.7",
@@ -19,6 +19,6 @@
 		"filewalker": "0.1.2",
 		"lazy": "1.0.11",
 		"nativescript-dev-typescript": "^0.7.3",
-		"typescript": "^2.9.0"
+    "typescript": "~3.9.0"
 	}
 }
