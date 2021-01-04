@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
+      "target": "ES2017",
+      "module": "esnext",
+      "moduleResolution": "node",
         "experimentalDecorators": true,
         "noEmitHelpers": true,
         "lib": [
@@ -17,7 +18,13 @@
                 "./node_modules/tns-core-modules/*",
                 "./node_modules/*"
             ]
+        },
+      "plugins": [
+        {
+          "transform": "@nativescript/webpack/transformers/ns-transform-native-classes",
+          "type": "raw"
         }
+      ]
     },
     "exclude": [
         "node_modules",

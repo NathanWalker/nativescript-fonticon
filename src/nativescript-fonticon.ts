@@ -42,10 +42,12 @@ export class TNSFontIcon {
           loadFile(TNSFontIcon.paths[currentName]).then(() => {
             cnt++;
             return loadFiles().then(() => {
+              // @ts-ignore
               resolve();
             });
           });
         } else {
+          // @ts-ignore
           resolve();
         }
       });
