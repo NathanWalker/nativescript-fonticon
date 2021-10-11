@@ -25,7 +25,7 @@ export const mapCss = (data: any, debug?: boolean): object => {
 
 export const cleanValue = (val: string): string | void => {
   const _v = val.replace(/(content\s*:\s*("|'))/, '').replace(/(("|');*)/, '').trim()
-  if (_v.length === 1) {
+  if (_v.includes('u')) {
       return _v
   } else {
       return `\\u${_v.substring(1)}`
