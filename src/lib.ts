@@ -24,9 +24,10 @@ export const mapCss = (data: any, debug?: boolean): object => {
 };
 
 export const cleanValue = (val: string): string | void => {
-  const matches = val.match(/content\s*:\s*"\\f([^"]+)"/i);
-  if (matches) {
-    return `\\uf${matches[1]}`;
+  const _v = val.replace(/(content\s*:\s*("|'))/, '').replace(/(("|');*)/, '').trim()
+  if (_v.length === 1) {
+      return _v
+  } else {
+      return `\\u${_v.substring(1)}`
   }
-  return void 0;
 };
