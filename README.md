@@ -1,3 +1,5 @@
+Source moved here for better maintainability: https://github.com/nstudio/nativescript-ui-kit/blob/main/packages/nativescript-fonticon/README.md
+<hr/>
 ## A simpler way to use font icons with NativeScript
 
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
